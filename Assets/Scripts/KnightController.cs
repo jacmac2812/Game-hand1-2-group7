@@ -8,15 +8,16 @@ public class KnightController : MonoBehaviour
     float rotSpeed = 80;
     float rot = 0f;
     float gravity = 8;
-    float jumpHeight = 3f; 
+    float jumpHeight = 2f; 
     Vector3 moveDir = Vector3.zero;
 
-    CharacterController controller;
+    UnityEngine.CharacterController controller;
     Animator anim;
 
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        controller = GetComponent<UnityEngine.CharacterController>();
+        //controller = gameObject.AddComponent<CharacterController>();
         anim = GetComponent<Animator>();
     }
 
